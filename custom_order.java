@@ -89,7 +89,7 @@ public class custom_order {
     System.out.println("Filling: " + fillingType);
     System.out.println("Toppings: " + toppings);
     System.out.println("_________________________________________");
-    
+
     // TEST CODE
       
     // STEP 10 DISPLAY COST AND SALES TAX
@@ -97,5 +97,19 @@ public class custom_order {
     tax = cost * TAX_RATE;
     System.out.printf("The tax is: $%.2f\n", tax);
     System.out.printf("The total due is: $%.2f\n",(tax + cost));
+
+    // NEXT STEPS
+    int totalCost;
+    String addOnList;
+
+    static void addItem(String item, int cost) {
+      totalCost+=cost;
+      addOnList+=item;
+    }
+
+    if (frostingType != "no"){
+      addItem(frostingType,2);
+      addOnList+=", ";
+    }
     }   
 }
